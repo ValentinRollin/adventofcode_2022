@@ -32,7 +32,7 @@ for rucksack in data:
         if char in b:
           score +=caractere.index(char)+1 
 
-print(caractere.index('b'))
+          
 print("\n//////////////////////////////////////")
 print("PART 1 :")      
 print("Le résultat est : ", score)
