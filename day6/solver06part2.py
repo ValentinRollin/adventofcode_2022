@@ -1,46 +1,26 @@
-
-file = open("input_06.txt")
-data=[]
-
-for line in file.readlines(): 
-    element = []
-    for token in line.strip():
-        data.append(token)
+with open('input_06.txt') as file:
+    data = file.read()
 
 
 cpt = 0
 lettres = []
 
-
 #       sgrrrrwcrrlqqgppfg 
 
 
+print(data)
 
-
-data.append('')
-data.append('')
-data.append('')
-data.append('')
-
-for a in data :
-    print(a,cpt)
-    if a != '':
-        if a not in lettres :  
-            lettres.append(a)
-            print("AJOUT : ",lettres)
-        else :
-            i = 0
-            while( i <= len(lettres)) :
-                print(i)  
-                i+=1
-                print("DELETE : ",lettres)    
-    else : 
+for a in range(14,len(data)) :
+    sr = set(data[(a-14):a])
+    if len(sr) == 14:
+        print(sr)
         break
-    cpt += 1
+    #print(a,cpt)
+
+
+
 
 print("\n//////////////////////////////////////")
 print("PART 1 :")      
-print("Le résultat est : ", cpt)
+print("Le résultat est : ", a)
 print("//////////////////////////////////////\n\n")  
-
-print(lettres)
